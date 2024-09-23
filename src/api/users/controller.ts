@@ -1,6 +1,7 @@
 import * as Hapi from "@hapi/hapi";
 import * as Boom from "@hapi/boom";
 import Resolver from "./resolver";
+import logger from "../../helper/logger";
 
 export default class UserController {
   public resolver: any;
@@ -13,6 +14,7 @@ export default class UserController {
     request: Hapi.Request,
     response: Hapi.ResponseToolkit
   ): Promise<any> => {
+    logger.info("Router----- line 17");
     console.log("Controller page ----");
     try {
       console.log(`GET URL REQ => ${request.url.href}`);

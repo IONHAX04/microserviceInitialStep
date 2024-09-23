@@ -17,7 +17,7 @@ dbConnection.connect((err: Error | undefined, client, release) => {
     return;
   }
   console.log("Database connected successfully!");
-  release(); 
+  release();
 });
 
 export default dbConnection;

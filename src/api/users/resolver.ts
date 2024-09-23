@@ -5,11 +5,9 @@ export default class Resolver {
 
   constructor() {
     this.userRepository = new UserRepository();
-    console.log("Haiiii");
   }
 
   public async userLogin(user_data: any, domain_url: any): Promise<any> {
-    console.log("Helloooo");
     return await this.userRepository.userLogin(user_data, domain_url);
   }
 }
