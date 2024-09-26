@@ -23,6 +23,17 @@ export default class UserRouters implements IRoute {
             auth: false,
           },
         },
+        {
+          method: "POST",
+          path: "/api/v1/users/signup",
+          config: {
+            handler: controller.userSignUp,
+            validate: validate.userSignUp,
+            description: "Signup Checking",
+            tags: ["api", "Users", "SignUp"],
+            auth: false,
+          },
+        },
       ]);
       console.log("userRoutes - Finish adding user routes.");
       resolve(true);

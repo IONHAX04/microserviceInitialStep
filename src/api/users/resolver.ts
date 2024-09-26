@@ -10,4 +10,8 @@ export default class Resolver {
   public async userLogin(user_data: any, domain_url: any): Promise<any> {
     return await this.userRepository.userLogin(user_data, domain_url);
   }
+
+  public async userSignUp(user_data: any, domain_url: any): Promise<any> {
+    return await this.userRepository.userSignUp(user_data, domain_url);
+  }
 }

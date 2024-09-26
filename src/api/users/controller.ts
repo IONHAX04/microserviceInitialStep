@@ -34,4 +34,27 @@ export default class UserController {
       }
     }
   };
+
+  public userSignUp = async (
+    request: Hapi.Request,
+    response: Hapi.ResponseToolkit
+  ): Promise<any> => {
+    logger.info("Router - sign up page");
+    try {
+      const req = request.headers.origin || "";
+      const index = req.indexOf("://");
+      console.log("Separate url : ", index);
+      const entity = await this.resolver.userSignUp(request.payload);
+      return response.response(entity);
+    } catch (error) {
+      console.log("error -> ", error);
+      if (error instanceof Error) {
+        return response.response(Boom.badImplementation(error.message));
+      } else {
+        return response.response(
+          Boom.badImplementation("An unknown error occurred")
+        );
+      }
+    }
+  };
 }
