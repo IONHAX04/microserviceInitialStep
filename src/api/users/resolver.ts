@@ -12,6 +12,7 @@ export default class Resolver {
   }
 
   public async userSignUp(user_data: any, domain_url: any): Promise<any> {
+    console.log("user_data", user_data);
     return await this.userRepository.userSignUp(user_data, domain_url);
   }
 }

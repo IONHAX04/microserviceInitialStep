@@ -6,7 +6,7 @@ dotenv.config();
 const dbConnection = new Pool({
   user: process.env.DB_USER || "postgres",
   host: process.env.DB_HOST || "localhost",
-  database: process.env.DB_NAME || "testingdb",
+  database: process.env.DB_NAME || "ublis_yoga_server",
   password: process.env.DB_PASSWORD || "ionhax",
   port: Number(process.env.DB_PORT) || 5432,
 });

@@ -45,6 +45,7 @@ export default class UserController {
       const index = req.indexOf("://");
       console.log("Separate url : ", index);
       const entity = await this.resolver.userSignUp(request.payload);
+      console.log('entity', entity)
       return response.response(entity);
     } catch (error) {
       console.log("error -> ", error);
