@@ -9,7 +9,7 @@ export default {
       domain: Joi.string().optional(),
     }),
     headers: Joi.object({
-      authorization: Joi.string().required(),
+      authorization: Joi.string().required(), 
     }).unknown(),
   },
   userSignUp: {

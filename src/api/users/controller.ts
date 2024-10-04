@@ -19,6 +19,8 @@ export default class UserController {
     try {
       console.log(`GET URL REQ => ${request.url.href}`);
       const req = request.headers.origin || "";
+
+      // https://ublisyoga.com/student
       const index = req.indexOf("://");
       console.log("Separate url : ", index);
       const entity = await this.resolver.userLogin(request.payload);
@@ -45,7 +47,7 @@ export default class UserController {
       const index = req.indexOf("://");
       console.log("Separate url : ", index);
       const entity = await this.resolver.userSignUp(request.payload);
-      console.log('entity', entity)
+      console.log("entity", entity);
       return response.response(entity);
     } catch (error) {
       console.log("error -> ", error);
