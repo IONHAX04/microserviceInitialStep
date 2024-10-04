@@ -4,54 +4,25 @@ import bcrypt from "bcryptjs";
 import { v4 as uuidv4 } from "uuid";
 
 export default class UserRepository {
-  public async isUserModelReady(): Promise<boolean> {
-    try {
-      const result = await dbConnection.query("SELECT 1 FROM users LIMIT 1");
-      return result.rowCount !== null && result.rowCount > 0;
-    } catch (error) {
-      Logger.error("Error checking users model:", error);
-      return false;
-    }
-  }
-
-  public async userLogin(
-    data: { email: string; password: string },
-    domain_url?: string
+  // LOGIN REPOSITORY FUNCTION
+  public async userLoginV1(
+    data: { user_id: string; password: string },
+    domain_code?: string
   ): Promise<{ success: boolean; message: string }> {
     return new Promise(async (resolve, reject) => {
       Logger.info("User login API triggered --- ");
       try {
-        // STAFF TABLE
-        const staffResult = await dbConnection.query(
-          "SELECT * FROM staff WHERE email = $1 AND password = $2",
-          [data.email, data.password]
-        );
-
-        if (staffResult.rows.length > 0) {
-          const validPassword = await bcrypt.compare(
-            data.password,
-            staffResult.rows[0].password
-          );
-          if (validPassword) {
-            resolve({
-              success: true,
-              message: "Staff login successful",
-            });
-            return;
-          }
-        }
-
         // USERS TABLE
-
         const userResult = await dbConnection.query(
-          "SELECT * FROM users WHERE email = $1",
-          [data.email]
+          `SELECT * FROM "UBLIS".ublisusers WHERE "refStCustId" = $1`,
+          [data.user_id]
         );
 
+        console.log("\n\nuserResult\n\n", userResult);
         if (userResult.rows.length > 0) {
           const validPassword = await bcrypt.compare(
             data.password,
-            userResult.rows[0].password
+            userResult.rows[0].refStHashedPassword
           );
           if (validPassword) {
             resolve({
@@ -61,13 +32,13 @@ export default class UserRepository {
           } else {
             resolve({
               success: false,
-              message: "Invalid email or password",
+              message: "Invalid user id or password",
             });
           }
         } else {
           resolve({
             success: false,
-            message: "Invalid email or password",
+            message: "Invalid user id or password",
           });
         }
       } catch (error) {
@@ -80,43 +51,22 @@ export default class UserRepository {
     });
   }
 
-  public async userSignUp(
+  // SIGN UP REPOSITORY FUNCTION
+  public async userSignUpV1(
     data: {
       temp_su_email: string;
       temp_su_password: string;
       domain?: string;
       temp_su_fname: string;
-      middleName?: string;
       temp_su_lname: string;
       temp_su_dob: string;
+      temp_su_age: string;
       temp_su_mobile: string;
     },
     domain_url?: string
   ): Promise<{ success: boolean; message: string }> {
-    const isModelReady = await this.isUserModelReady();
-    if (!isModelReady) {
-      return {
-        success: false,
-        message: "User model is not ready",
-      };
-    }
-
-    
-
     try {
-      if (
-        !data.temp_su_email ||
-        !data.temp_su_password ||
-        !data.temp_su_fname ||
-        !data.temp_su_lname ||
-        !data.temp_su_dob
-      ) {
-        return {
-          success: false,
-          message: "Missing required fields",
-        };
-      }
-
+      console.log("Testing one line 87");
       // SALT
       const saltRounds = 10;
       const hashedPassword = await bcrypt.hash(
@@ -125,39 +75,67 @@ export default class UserRepository {
       );
       const currentTimestamp = new Date().toISOString();
 
-      // Generate UUIDs for refStId and refUtId
-      const refStId = uuidv4(); // Unique identifier for refStId
-      // const refUtId = uuidv4(); // Uncomment if you need a refUtId as well.
+      const refStId = uuidv4();
+      console.log("refStId", refStId);
 
-      // Insert query to the database
+      const history = JSON.stringify([
+        {
+          createdAt: currentTimestamp,
+          createdBy: domain_url || "system",
+        },
+        {
+          updatedAt: currentTimestamp,
+          updatedBy: domain_url || "system",
+        },
+      ]);
+
+      // TO CREATE THE CUST ID
+      const userCountResult = await dbConnection.query(
+        `SELECT COUNT(*) FROM "UBLIS".ublisUsers`
+      );
+      const userCount = parseInt(userCountResult.rows[0].count, 10);
+      const newCustomerId = `UBY${(10000 + userCount + 1).toString()}`;
+
       const result = await dbConnection.query(
-        `INSERT INTO ublisUsers (
-          refStId,
-          refStFName,
-          refStLName,
-          refStMName,
-          refStDOB,
-          refsCreationDate,
-          refsCreatedBy,
-          refsLastUpdated,
-          refsUpdatedBy,
-          refsUserStatus,
-          refsIsActive,
-          refSignupDate
-        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`,
+        `INSERT INTO "UBLIS".ublisUsers (
+          "refStId",
+          "refStEmail",
+          "refStPassword",
+          "refStHashedPassword",
+          "refStFName",
+          "refStLName",
+          "refStDOB",
+          "refStAge",
+          "refStCreatedAt",
+          "refStCreatedBy",
+          "refStUpdatedAt",
+          "refStUpdatedBy",
+          "refStUserStatus",
+          "refStIsActive",
+          "refSignUpDate",
+          "refUtHistory",
+          "refStCustId",
+          "refUtId"
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING *`,
         [
           refStId,
+          data.temp_su_email,
+          data.temp_su_password,
+          hashedPassword,
           data.temp_su_fname,
           data.temp_su_lname,
-          data.middleName || null,
           data.temp_su_dob,
+          data.temp_su_age,
           currentTimestamp,
           domain_url || "system",
           currentTimestamp,
           domain_url || "system",
           "active",
-          true,
+          "active",
           currentTimestamp,
+          history,
+          newCustomerId,
+          1,
         ]
       );
 

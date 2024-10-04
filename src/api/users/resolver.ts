@@ -7,12 +7,12 @@ export default class Resolver {
     this.userRepository = new UserRepository();
   }
 
-  public async userLogin(user_data: any, domain_url: any): Promise<any> {
-    return await this.userRepository.userLogin(user_data, domain_url);
+  public async userLoginV1(user_data: any, domain_code: any): Promise<any> {
+    return await this.userRepository.userLoginV1(user_data, domain_code);
   }
 
-  public async userSignUp(user_data: any, domain_url: any): Promise<any> {
+  public async userSignUpV1(user_data: any, domain_code: any): Promise<any> {
     console.log("user_data", user_data);
-    return await this.userRepository.userSignUp(user_data, domain_url);
+    return await this.userRepository.userSignUpV1(user_data, domain_code);
   }
 }

@@ -15,25 +15,33 @@ export default class UserController {
     response: Hapi.ResponseToolkit
   ): Promise<any> => {
     logger.info("Router----- line 17");
-    console.log("Controller page ----");
     try {
-      console.log(`GET URL REQ => ${request.url.href}`);
-      const req = request.headers.origin || "";
+      logger.info(`GET URL REQ => ${request.url.href}`);
+      const domainCode = request.headers.domain_code || "";
+      let entity;
 
-      // https://ublisyoga.com/student
-      const index = req.indexOf("://");
-      console.log("Separate url : ", index);
-      const entity = await this.resolver.userLogin(request.payload);
-      return response.response(entity);
-    } catch (error) {
-      console.log("error -> ", error);
-      if (error instanceof Error) {
-        return response.response(Boom.badImplementation(error.message));
-      } else {
-        return response.response(
-          Boom.badImplementation("An unknown error occurred")
-        );
+      // if (domainCode.includes("ubl")) {
+      entity = await this.resolver.userLoginV1(request.payload);
+      // } else {
+      //   entity = await this.resolver.userLoginV2(request.payload);
+      // }
+
+      // Check entity response for success/failure
+      if (entity.success) {
+        return response.response(entity).code(200);
       }
+      return response.response(entity).code(401); // Unauthorized if failed
+    } catch (error) {
+      logger.error("Error in userLogin:", error);
+      return response
+        .response({
+          success: false,
+          message:
+            error instanceof Error
+              ? error.message
+              : "An unknown error occurred",
+        })
+        .code(500);
     }
   };
 
@@ -41,23 +49,33 @@ export default class UserController {
     request: Hapi.Request,
     response: Hapi.ResponseToolkit
   ): Promise<any> => {
+    console.log("testing");
     logger.info("Router - sign up page");
     try {
-      const req = request.headers.origin || "";
-      const index = req.indexOf("://");
-      console.log("Separate url : ", index);
-      const entity = await this.resolver.userSignUp(request.payload);
-      console.log("entity", entity);
-      return response.response(entity);
-    } catch (error) {
-      console.log("error -> ", error);
-      if (error instanceof Error) {
-        return response.response(Boom.badImplementation(error.message));
-      } else {
-        return response.response(
-          Boom.badImplementation("An unknown error occurred")
-        );
+      const domainCode = request.headers.domain_code || "";
+
+      // if (domainCode.includes("ubl")) {
+      const entity = await this.resolver.userSignUpV1(request.payload);
+      // } else {
+      //   entity = await this.resolver.userSignUpV2(request.payload);
+      // }
+
+      // Check entity response for success/failure
+      if (entity.success) {
+        return response.response(entity).code(201); // Created
       }
+      return response.response(entity).code(400); // Bad Request if failed
+    } catch (error) {
+      logger.error("Error in userSignUp:", error);
+      return response
+        .response({
+          success: false,
+          message:
+            error instanceof Error
+              ? error.message
+              : "An unknown error occurred",
+        })
+        .code(500);
     }
   };
 }

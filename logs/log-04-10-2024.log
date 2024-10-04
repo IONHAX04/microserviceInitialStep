@@ -1,0 +1,161 @@
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:30:21.374Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:30:21.378Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:30:21.389Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:30:21.395Z"}
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:32:46.894Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:32:46.897Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:32:46.904Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:32:46.909Z"}
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:33:54.368Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:33:54.372Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:33:54.381Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:33:54.386Z"}
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:34:54.078Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:34:54.082Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:34:54.092Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:34:54.098Z"}
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:35:20.632Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:35:20.644Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:35:20.671Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:35:20.684Z"}
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:35:51.921Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:35:51.925Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:35:51.936Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:35:51.942Z"}
+{"level":"info","message":"Router started","timestamp":"2024-10-04T07:37:26.139Z"}
+{"level":"info","message":"server running --- line 9","timestamp":"2024-10-04T07:37:26.143Z"}
+{"level":"info","message":"Router finished...","timestamp":"2024-10-04T07:37:26.153Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:37:26.157Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:37:39.043Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:37:51.708Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:38:52.443Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:39:05.193Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:39:12.713Z"}
+{"code":"42P01","file":"parse_relation.c","length":109,"level":"error","line":"1452","message":"Error in userSignUp: relation \"ublisusers\" does not exist","name":"error","position":"13","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:39:12.844Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:39:38.117Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:39:50.001Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:40:05.140Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:40:14.025Z"}
+{"code":"42703","file":"parse_target.c","length":130,"level":"error","line":"1071","message":"Error in userSignUp: column \"refstid\" of relation \"ublisusers\" does not exist","name":"error","position":"44","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refstid\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:40:14.177Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:40:59.764Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:41:05.867Z"}
+{"code":"42703","file":"parse_target.c","length":130,"level":"error","line":"1071","message":"Error in userSignUp: column \"refstid\" of relation \"ublisusers\" does not exist","name":"error","position":"44","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refstid\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:41:05.976Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:43:01.534Z"}
+{"code":"42703","file":"parse_target.c","length":133,"level":"error","line":"1071","message":"Error in userSignUp: column \"refstemail\" of relation \"ublisusers\" does not exist","name":"error","position":"63","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refstemail\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:43:01.786Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:48:57.931Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:49:06.463Z"}
+{"code":"42703","file":"parse_target.c","length":136,"level":"error","line":"1071","message":"Error in userSignUp: column \"refsIsActive\" of relation \"ublisusers\" does not exist","name":"error","position":"382","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refsIsActive\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:49:06.616Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:49:57.234Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:49:59.664Z"}
+{"code":"42703","file":"parse_target.c","length":137,"level":"error","line":"1071","message":"Error in userSignUp: column \"refstIsActive\" of relation \"ublisusers\" does not exist","name":"error","position":"382","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refstIsActive\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:49:59.772Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:51:11.866Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:52:48.561Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:53:11.004Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:53:20.351Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:53:22.646Z"}
+{"code":"42703","file":"parse_target.c","length":137,"level":"error","line":"1071","message":"Error in userSignUp: column \"refstIsActive\" of relation \"ublisusers\" does not exist","name":"error","position":"382","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refstIsActive\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:53:22.800Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:53:35.345Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:53:37.345Z"}
+{"code":"42703","file":"parse_target.c","length":137,"level":"error","line":"1071","message":"Error in userSignUp: column \"refSignupDate\" of relation \"ublisusers\" does not exist","name":"error","position":"409","routine":"checkInsertTargets","severity":"ERROR","stack":"error: column \"refSignupDate\" of relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T07:53:37.451Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:54:09.749Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:54:12.358Z"}
+{"code":"23502","column":"refUtHistory","detail":"Failing row contains (557b355c-bb87-4fcb-a5f4-c5c7cd315154, testuser@example.com, YourSecurePassword123, $2a$10$hGT8oOWYRKVgix5fE3YSV.6404aC6Gvty0SDKiQ0Vf7kFcZ6ril.m, John, Doe, null, 1990-01-01, 34, null, null, null, 2024-10-04, system, 2024-10-04, system, null, null, active, null, null, null, null, null, null, 2024-10-04, null, null, null, null, active, null).","file":"execMain.c","length":551,"level":"error","line":"2009","message":"Error in userSignUp: null value in column \"refUtHistory\" of relation \"ublisusers\" violates not-null constraint","name":"error","routine":"ExecConstraints","schema":"UBLIS","severity":"ERROR","stack":"error: null value in column \"refUtHistory\" of relation \"ublisusers\" violates not-null constraint\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","table":"ublisusers","timestamp":"2024-10-04T07:54:12.486Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T07:55:16.440Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:55:50.184Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:56:23.673Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:57:01.662Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T07:57:05.790Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:01:07.851Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T08:01:31.739Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T08:02:21.637Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:30:48.076Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:30:57.683Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:31:03.659Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:31:10.940Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:33:44.135Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:33:59.873Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T08:34:05.867Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T08:34:09.108Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T08:34:21.094Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:36:21.036Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:36:33.796Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:36:42.969Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:36:49.531Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:36:59.299Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:37:09.153Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:37:14.037Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:37:19.834Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:37:23.899Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:37:44.773Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:37:58.855Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:38:08.903Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:38:16.498Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:38:45.796Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:38:58.935Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:41:53.153Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:42:11.256Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T09:42:16.470Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:47:04.766Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:47:12.742Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:47:50.187Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:48:01.354Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:48:13.596Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:48:20.368Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:48:26.272Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:49:38.974Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:50:04.742Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:50:04.743Z"}
+{"level":"error","message":"Error in userLogin: this.resolver.userLoginV2 is not a function","stack":"TypeError: this.resolver.userLoginV2 is not a function\n    at UserController.<anonymous> (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\src\\api\\users\\controller.ts:26:38)\n    at Generator.next (<anonymous>)\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\src\\api\\users\\controller.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\src\\api\\users\\controller.ts:4:12)\n    at UserController.userLogin (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\src\\api\\users\\controller.ts:16:21)\n    at exports.Manager.execute (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\@hapi\\hapi\\lib\\toolkit.js:57:29)\n    at Object.internals.handler (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\@hapi\\hapi\\lib\\handler.js:46:48)\n    at exports.execute (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\@hapi\\hapi\\lib\\handler.js:31:36)\n    at Request._lifecycle (C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\@hapi\\hapi\\lib\\request.js:370:68)","timestamp":"2024-10-04T09:50:04.748Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:50:21.328Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:50:26.017Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:50:28.038Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:50:28.039Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:50:28.040Z"}
+{"code":"42P01","file":"parse_relation.c","length":109,"level":"error","line":"1452","message":"Error in userLogin: relation \"ublisusers\" does not exist","name":"error","position":"15","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"ublisusers\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T09:50:28.057Z"}
+{"level":"error","message":"Error in userLogin: Database error","success":false,"timestamp":"2024-10-04T09:50:28.058Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:51:09.869Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:51:15.305Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:51:15.306Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:51:15.308Z"}
+{"code":"42703","file":"parse_relation.c","hint":"Perhaps you meant to reference the column \"ublisusers.refStCustId\".","length":180,"level":"error","line":"3738","message":"Error in userLogin: column \"refstcustid\" does not exist","name":"error","position":"40","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column \"refstcustid\" does not exist\n    at C:\\Users\\THIRU\\Documents\\UblisYogaBackendInitial\\attendanceServices\\node_modules\\pg-pool\\index.js:45:11\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"2024-10-04T09:51:15.325Z"}
+{"level":"error","message":"Error in userLogin: Database error","success":false,"timestamp":"2024-10-04T09:51:15.327Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:52:39.302Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:52:41.108Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:52:41.109Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:52:41.110Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:54:54.574Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:54:56.697Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:54:56.698Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:54:56.699Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:55:13.609Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:55:15.607Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:55:15.608Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:55:15.609Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:55:34.767Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:55:40.005Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:55:40.006Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:55:40.007Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:56:06.446Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:56:11.472Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:56:11.472Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:56:11.473Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:56:38.863Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:56:45.704Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:56:45.705Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:56:45.706Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:57:14.391Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:57:14.392Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:57:14.393Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:57:24.540Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:57:24.540Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:57:24.541Z"}
+{"level":"info","message":"Router----- line 17","timestamp":"2024-10-04T09:57:29.850Z"}
+{"level":"info","message":"GET URL REQ => http://localhost:6200/api/v1/users/login","timestamp":"2024-10-04T09:57:29.851Z"}
+{"level":"info","message":"User login API triggered --- ","timestamp":"2024-10-04T09:57:29.852Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T09:57:55.849Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T10:11:10.206Z"}
+{"level":"info","message":"Router - sign up page","timestamp":"2024-10-04T10:11:17.980Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T10:11:41.873Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T10:25:16.823Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T10:25:30.918Z"}
+{"level":"info","message":"server running --- from server.ts","timestamp":"2024-10-04T10:28:18.718Z"}
