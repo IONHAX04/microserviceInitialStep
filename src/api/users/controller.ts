@@ -54,11 +54,11 @@ export default class UserController {
     try {
       const domainCode = request.headers.domain_code || "";
 
-      // if (domainCode.includes("ubl")) {
+      if (domainCode.includes("ubl")) {
       const entity = await this.resolver.userSignUpV1(request.payload);
-      // } else {
-      //   entity = await this.resolver.userSignUpV2(request.payload);
-      // }
+      } else {
+        const entity = await this.resolver.userSignUpV2(request.payload);
+      }
 
       // Check entity response for success/failure
       if (entity.success) {

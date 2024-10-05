@@ -4,7 +4,7 @@ export default {
   userLogin: {
     payload: Joi.object({
       // PAYLOAD DATA
-      email: Joi.string().required(),
+      user_id: Joi.string().required(),
       password: Joi.string().required(),
       domain: Joi.string().optional(),
     }),

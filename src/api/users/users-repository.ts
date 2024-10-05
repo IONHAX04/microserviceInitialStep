@@ -1,14 +1,24 @@
 import dbConnection from "../../helper/db";
-import { default as Logger } from "../.././helper/logger";
+import { default as Logger } from "../../helper/logger";
 import bcrypt from "bcryptjs";
 import { v4 as uuidv4 } from "uuid";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const JWT_SECRET = process.env.ACCESS_TOKEN || "default_secret_key";
+if (!JWT_SECRET) {
+  console.log("JWT_SECRET", JWT_SECRET);
+  throw new Error("JWT_SECRET is not defined");
+}
 
 export default class UserRepository {
   // LOGIN REPOSITORY FUNCTION
   public async userLoginV1(
     data: { user_id: string; password: string },
     domain_code?: string
-  ): Promise<{ success: boolean; message: string }> {
+  ): Promise<{ success: boolean; message: string; token?: string }> {
     return new Promise(async (resolve, reject) => {
       Logger.info("User login API triggered --- ");
       try {
@@ -25,9 +35,15 @@ export default class UserRepository {
             userResult.rows[0].refStHashedPassword
           );
           if (validPassword) {
+            const token = jwt.sign(
+              { user_id: userResult.rows[0].refStCustId },
+              JWT_SECRET,
+              { expiresIn: "20m" }
+            );
             resolve({
               success: true,
               message: "User login successful",
+              token,
             });
           } else {
             resolve({
